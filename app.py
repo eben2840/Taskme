@@ -12,6 +12,15 @@ def home():
 
 
 
+@app.route('/home',methods=['GET','POST'])
+def come():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('home.html')
+    return render_template('home.html')
+
+
+
 
 @app.route('/about',methods=['GET','POST'])
 def about():
