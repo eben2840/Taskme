@@ -29,6 +29,16 @@ def about():
         return render_template('about.html')
     return render_template('about.html')
 
+
+
+
+@app.route('/page',methods=['GET','POST'])
+def page():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('page.html')
+    return render_template('page.html')
+
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
     app.run(port=5000,debug=True)
